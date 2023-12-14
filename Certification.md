@@ -1,3 +1,5 @@
+# Dat Engineering for Streaming Data
+
 ## Big Data Challenges
 
 - Building **scalable and reliable pipelines** is a core responsibility for data engineers in modern organizations.
@@ -298,3 +300,697 @@ d. Organizing alerts in an efficient way
 8. B
 9. A, B, C
 10. C
+
+## Key Concepts in Dataflow and Apache Beam Pipelines:
+
+- **Apache Beam:** Enables the creation of data processing pipelines.
+- **Execution Engine:** Critical for implementing pipelines, involves considerations like maintenance overhead, reliability, scaling, monitoring, and avoiding vendor lock-in.
+- **Dataflow:** A fully managed service within Google Cloud for executing Apache Beam pipelines.
+- **Serverless and NoOps:** Dataflow operates in a serverless and NoOps environment, automating infrastructure management, maintenance, and scaling tasks.
+- **Low Maintenance Design:** Dataflow minimizes the need for manual intervention, allowing users to focus more on data analysis.
+- **Tasks Performed by Dataflow:**
+  - Optimization of pipeline model's execution graph.
+  - Scheduling distributed work to workers with auto-scaling.
+  - Auto-healing worker faults.
+  - Automatic rebalancing of efforts for efficient worker utilization.
+  - Outputting data, for instance, to BigQuery.
+- **BigQuery Integration:** Data can be outputted to BigQuery, a powerful tool for further data analysis.
+- **Dataflow Templates:** Beneficial for both experienced Java/Python developers and beginners, covering common use cases across Google Cloud products.
+- **Template Categories:**
+  - Streaming Templates: Process continuous or real-time data (e.g., Pub/Sub to BigQuery).
+  - Batch Templates: Handle bulk data or batch load data (e.g., BigQuery to Cloud Storage).
+  - Utility Templates: Address activities related to bulk compression, deletion, and conversion.
+- **Continuous Growth:** The list of Dataflow templates is continuously expanding, providing solutions for various scenarios.
+
+#### Questions:
+
+1. When selecting an execution engine for a data processing pipeline, what considerations should be taken into account?
+   - A) Amount of maintenance overhead
+   - B) Reliability of infrastructure
+   - C) Monitoring capabilities
+   - D) Pipeline scaling approach
+
+2. What does a NoOps environment imply in the context of data processing pipelines?
+   - A) Automated maintenance
+   - B) Manual scaling
+   - C) Continuous monitoring
+   - D) Infrastructure provisioning
+
+3. What tasks does Dataflow perform when a job is received in a data processing pipeline?
+   - A) Optimize the pipeline's execution graph
+   - B) Schedule distributed work to new workers
+   - C) Auto-heal worker faults
+   - D) Balance efforts for efficient worker utilization
+
+4. Which service in the Google Cloud ecosystem is specifically designed for executing Apache Beam pipelines?
+   - A) Google Cloud Storage
+   - B) Google Bigtable
+   - C) Google Dataflow
+   - D) Google BigQuery
+
+5. What is the primary advantage of using Dataflow templates in data processing pipelines?
+   - A) Efficient resource monitoring
+   - B) Streamlined code development
+   - C) Reduced maintenance overhead
+   - D) Manual scaling options
+
+6. In the context of Google Cloud's serverless computing, what tasks are managed on behalf of the users?
+   - A) Data pipeline design
+   - B) Resource provisioning
+   - C) Performance tuning
+   - D) Template creation
+
+7. What types of templates are available in Dataflow for processing continuous or real-time data?
+   - A) Streaming templates
+   - B) Batch templates
+   - C) Utility templates
+   - D) Compression templates
+
+8. Which task is NOT performed by Dataflow when processing a job in a data pipeline?
+   - A) Auto-scaling
+   - B) Worker fault auto-healing
+   - C) Manual rebalancing
+   - D) Optimization of the execution graph
+
+9. What execution model does Dataflow operate in, allowing users to focus more on data analysis?
+   - A) MultiOps
+   - B) ServerOps
+   - C) NoOps
+   - D) HyperOps
+
+10. What is a key benefit of Dataflow being built on Google's infrastructure?
+   - A) Vendor lock-in
+   - B) Reliable auto scaling
+   - C) Manual maintenance
+   - D) Limited scaling options
+
+**Solutions:**
+
+1. A, B, C, D
+2. A
+3. A, B, C, D
+4. C
+5. B, C
+6. B, C
+7. A
+8. C
+9. C
+10. B
+
+## Abstract: Visulization with Looker Studio
+
+- **Telling a good story with data through a dashboard is crucial for the success of a data pipeline.**
+- After data is in BigQuery, **Looker and Looker Studio** from Google Cloud provide solutions for easy data interaction and visualization.
+- **Looker supports BigQuery and over 60 SQL databases.**
+- Developers can define a semantic modeling layer using **LookML (Looker Modeling Language)**, freeing data engineers to focus on business logic across an organization.
+- The Looker platform is 100% web-based, making it easy to integrate into existing workflows and share with multiple teams.
+- The **Looker API allows embedding Looker reports in other applications.**
+- Dashboards in Looker, like the Business Pulse dashboard, visualize data to make insights easily understandable.
+- For a sales organization, dashboards can show figures like new users acquired, monthly sales trends, and year-to-date orders.
+- **Looker provides various data visualization options, including area charts, line charts, Sankey diagrams, funnels, and liquid fill gauges.**
+- Dashboards, such as the one monitoring New York City taxis, display total revenue, total numbers of passengers, and total number of rides over time.
+- Looker allows plotting data on a map to visualize ride distribution, busy areas, and peak hours.
+- **The purpose of Looker's features is to help draw insights and make informed business decisions.**
+- To share dashboards, you can schedule delivery through storage services like Google Drive, Slack, or Dropbox.
+
+**1. Which databases are supported by Looker for semantic modeling?**
+
+- A. Only BigQuery
+- B. More than 60 different SQL databases
+- C. Only NoSQL databases
+- D. MongoDB and Cassandra
+
+**2. What is the primary purpose of LookML in Looker?**
+
+- A. Allows direct SQL queries
+- B. Defines logic and permissions
+- C. Manages infrastructure setup
+- D. Restricts data access
+
+**3. How does Looker contribute to the collaboration of multiple teams within an organization?**
+
+- A. Provides complex visualizations
+- B. Scheduling delivery through storage services
+- C. 100% web-based platform
+- D. Embedding Looker reports in emails
+
+**4. What types of charts can be used for data visualization in Looker dashboards?**
+
+- A. Pie charts and bubble charts
+- B. Area charts, line charts, and Sankey diagrams
+- C. Bar charts and scatter plots
+- D. Funnels and radar charts
+
+**5. What is the significance of Looker's 100% web-based platform?**
+
+- A. Allows direct SQL queries
+- B. Makes integration into existing workflows easy
+- C. Restricts sharing options
+- D. Only supports on-premises deployment
+
+**6. How can Looker dashboards be shared with a team for collaboration?**
+
+- A. Direct SQL sharing
+- B. Scheduling delivery through storage services
+- C. Embedding Looker reports in emails
+- D. Restricting sharing options
+
+**7. What is the primary purpose of Looker API?**
+
+- A. Embedding Looker reports in other applications
+- B. Restricting data access
+- C. Providing complex visualizations
+- D. Direct SQL sharing
+
+**8. In the context of Looker dashboards, what is a timeseries used for?**
+
+- A. Displaying static charts
+- B. Monitoring metrics over time
+- C. Restricting data access
+- D. Embedding SQL queries
+
+**9. How does Looker contribute to monitoring key metrics related to New York City taxis over time?**
+
+- A. Embedding SQL queries
+- B. Displaying information in a timeseries
+- C. Using only line charts
+- D. Plotting data on a map
+
+**10. What is the purpose of Looker Studio in enhancing data analysis?**
+
+- A. Managing infrastructure setup
+- B. Allows direct SQL queries
+- C. Provides a 100% web-based platform
+- D. Defines a semantic modeling layer
+
+**Answers:**
+1. B
+2. B
+3. C
+4. B
+5. B, C
+6. B, C
+7. A
+8. B
+9. D
+10. D
+
+
+---
+---
+# Big Data with BigQuery
+
+## Introduction
+- Explore Dataflow and Pub/Sub as Google Cloud's solutions for processing streaming data.
+- Focus on BigQuery, a fully managed data warehouse that handles terabytes and petabytes of data for management decisions.
+- Understand the distinction between a data warehouse and a data lake, emphasizing the structured and organized nature of a data warehouse.
+- BigQuery is fully managed and serverless, allowing users to focus on SQL queries without concerns about deployment, scalability, or security.
+- Key features include storage and analytics, supporting petabytes of data and offering built-in features like machine learning and geospatial analysis.
+- BigQuery operates on a pay-as-you-go pricing model based on query processing and permanent table storage, with an option for flat-rate pricing.
+- Data in BigQuery is encrypted at rest by default, providing security without additional customer actions.
+- The platform facilitates machine learning by allowing users to write ML models directly in SQL or export datasets to other tools like Vertex AI.
+- Data warehouse solution architecture involves handling real-time or batch data, processing through Pub/Sub or Cloud Storage, and using Dataflow for ETL.
+- BigQuery acts as the central hub linking data processes through Dataflow and providing data access for analytics, AI, and ML tools.
+- The analytics engine of BigQuery ingests, stores, analyzes, and outputs processed data for business intelligence and AI/ML tools.
+- Connect visualization tools like Looker, Looker Studio, Tableau, or other BI tools to BigQuery for business or data analysts.
+- Query BigQuery datasets directly from Google Sheets, performing operations like pivot tables for spreadsheet users.
+- Data scientists and machine learning engineers can call data from BigQuery through AutoML or Workbench as part of Vertex AI.
+- BigQuery serves as a staging area for data analytics workloads, granting access to various users for insights and decision-making.
+
+### Questions
+**1. What are the main services provided by BigQuery?**
+
+- A. Storage
+- B. Analytics
+- C. Machine Learning
+- D. Business Intelligence
+
+**2. BigQuery is considered a fully managed serverless solution. What does this mean?**
+
+- A. Users have control over the underlying infrastructure.
+- B. It requires manual provisioning of resources.
+- C. It manages servers in the backend without user intervention.
+- D. It's limited to batch processing only.
+
+**3. How is data pricing handled in BigQuery?**
+
+- A. Fixed monthly billing for all users.
+- B. Pay-as-you-go based on query processing and table storage.
+- C. Free for a limited amount of data.
+- D. Flat-rate pricing for individual queries.
+
+**4. Which tools can be connected to BigQuery for business or data analysts?**
+
+- A. Looker
+- B. Tableau
+- C. Google Sheets
+- D. All of the above
+
+**5. What is the purpose of ETL in the data warehouse solution architecture involving BigQuery?**
+
+- A. Encrypt data at rest.
+- B. Extract, Transform, and Load data.
+- C. Manage server infrastructure.
+- D. Connect to Pub/Sub.
+
+**6. What is a distinguishing feature of a data warehouse compared to a data lake?**
+
+- A. Contains raw, unorganized data.
+- B. Used for advanced querying.
+- C. Primarily structured and organized data.
+- D. Has no specified purpose.
+
+**7. In BigQuery, how is machine learning implemented?**
+
+- A. Using custom Python scripts.
+- B. Exporting datasets to Vertex AI.
+- C. Directly writing ML models in SQL.
+- D. Utilizing third-party machine learning tools.
+
+**8. What is the primary function of the analytics engine of BigQuery in a data pipeline?**
+
+- A. Process real-time data.
+- B. Manage server infrastructure.
+- C. Ingest, store, and analyze processed data.
+- D. Extract data from Cloud Storage.
+
+**9. Which challenges of big data are discussed in the text?**
+
+- A. Variety
+- B. Volume
+- C. Velocity
+- D. Veracity
+- E. All of the above
+
+**10. What is the role of Dataflow in the typical data warehouse solution architecture?**
+
+- A. Encrypt data at rest.
+- B. Connect to Pub/Sub.
+- C. Extract, Transform, and Load data.
+- D. Process data from both real-time and batch pipelines.
+
+**Solutions:**
+> *(The correct answers are indicated with an "X")*
+
+**1.** X - A. Storage  
+**2.** X - C. It manages servers in the backend without user intervention.  
+**3.** X - B. Pay-as-you-go based on query processing and table storage.  
+**4.** X - D. All of the above  
+**5.** X - B. Extract, Transform, and Load data.  
+**6.** X - C. Primarily structured and organized data.  
+**7.** X - C. Directly writing ML models in SQL.  
+**8.** X - C. Ingest, store, and analyze processed data.  
+**9.** X - E. All of the above  
+**10.** X - D. Process data from both real-time and batch pipelines.
+
+
+## Storage and analysis
+- **BigQuery Services:**
+  - Provides fully-managed storage and SQL-based analytical engine.
+  - Connected by Google's high-speed internal network for scalable storage and compute.
+
+- **Storage and Metadata Management:**
+  - Manages datasets from internal, external, multi-Cloud, and public sources.
+  - Automatically replicates, backs up, and auto-scales stored data.
+  - Supports querying external data sources without ingestion.
+
+- **Data Ingestion Patterns:**
+  - Three basic patterns: batch load, streaming, and generated data.
+  - Batch load for one-time or scheduled operations.
+  - Streaming for continuous near real-time data availability.
+  - Generated data through SQL statements.
+
+- **Data Analysis in BigQuery:**
+  - Optimized for analytical queries on large datasets.
+  - Handles terabytes in seconds and petabytes in minutes.
+  - Supports ad hoc analysis using standard SQL.
+  - Geospatial analytics with geography data types.
+  - Machine learning models through BigQuery ML.
+  - Interactive business intelligence dashboards using BigQuery BI Engine.
+
+- **Query Execution in BigQuery:**
+  - Default interactive queries executed as needed.
+  - Batch queries queued and start when idle resources available.
+
+### Questions:
+
+1. What are the two main services provided by BigQuery?
+   - A. Data storage
+   - B. Machine learning
+   - C. Analytical engine
+   - D. Data visualization
+
+2. How is BigQuery's storage and analytical engine connected?
+   - A. Fiber-optic cables
+   - B. Google's internal network
+   - C. Public internet
+   - D. Satellite links
+
+3. Which types of data sources can BigQuery ingest from?
+   - A. Internal data
+   - B. Only Cloud storage
+   - C. Multi-Cloud data
+   - D. Only external data
+
+4. What is a potential risk of saving and processing data separately in BigQuery?
+   - A. Improved query performance
+   - B. Inconsistency in data
+   - C. Enhanced data security
+   - D. Faster data replication
+
+5. What are the three basic patterns for loading data into BigQuery?
+   - A. Batch load
+   - B. Stream load
+   - C. Cloud load
+   - D. Generated data load
+
+6. How does BigQuery optimize analytical queries?
+   - A. Using machine learning algorithms
+   - B. By parallelizing storage and compute
+   - C. Restricting query access
+   - D. Minimizing data replication
+
+7. What types of analytics features are supported by BigQuery?
+   - A. Ad hoc analysis
+   - B. Machine learning models
+   - C.
+
+Interactive queries
+   - D. Streaming analytics
+
+8. What is the purpose of BigQuery BI Engine?
+   - A. Data replication
+   - B. Business intelligence dashboards
+   - C. Cloud storage management
+   - D. Geospatial analytics
+
+9. How does BigQuery handle interactive queries by default?
+   - A. Execute immediately
+   - B. Queue for batch processing
+   - C. Schedule for later
+   - D. Parallelize processing
+
+10. What option does BigQuery provide for executing queries when resources are idle?
+   - A. Batch queries
+   - B. Immediate queries
+   - C. Parallel queries
+   - D. Stream queries
+
+### Solutions:
+
+1. C
+2. B
+3. A, C
+4. B
+5. A, B, D
+6. B
+7. A, B, D
+8. B
+9. A
+10. A
+
+## Using BigQuery ML to predict customer lifetime value
+
+- **Introduction to Machine Learning Models:**
+  - Types of ML models are crucial for effective learning.
+  - High-quality data is essential for training models.
+
+- **Example: Predicting Customer Lifetime Value (LTV):**
+  - Customer LTV estimation is common in marketing.
+  - Google Analytics ecommerce dataset is used.
+  - Goal: Identify high-value customers for targeted promotions.
+
+- **Key Fields for Analysis:**
+  - Relevant fields include customer lifetime pageviews, total visits, average time spent, revenue, and transactions.
+  - Columns are fed into the model to predict the label (LTV).
+
+- **Data Preparation:**
+  - Explanation of records, labels, and examples in the dataset.
+  - Labels can be numeric or categorical, influencing the choice of regression model.
+
+- **Types of Regression Models:**
+  - Linear regression for numeric labels (e.g., revenue).
+  - Logistic regression for categorical labels (e.g., High Value Customer).
+
+- **Understanding Features:**
+  - Columns in the dataset are referred to as features.
+  - Feature engineering is the process of working with features, akin to selecting ingredients in cooking.
+  - BigQuery ML automates tasks like one-hot encoding for feature preparation.
+
+- **Data Splitting and Evaluation:**
+  - BigQuery ML automatically splits data into training and evaluation sets.
+  - Feature engineering and data quality evaluation are crucial tasks.
+
+- **Predicting on Future Data:**
+  - After training on historical data, the model is used to predict future datasets.
+  - Successful predictions allow targeting high-value customers in real-time.
+
+### Questions:
+
+1. What is the primary purpose of predicting customer lifetime value (LTV) in the provided example?
+   - A. Identifying high-value customers
+   - B. Analyzing historical data
+   - C. Improving website design
+   - D. Evaluating promotional campaigns
+
+2. In machine learning, what is the role of features in a dataset?
+   - A. They are numeric variables.
+   - B. They are potential ingredients for cooking.
+   - C. They are categorical variables.
+   - D. They are known answers from historical data.
+
+3. What is the significance of feature engineering in machine learning?
+   - A. It automates model training.
+   - B. It transforms calculated fields into features.
+   - C. It helps in sifting through data.
+   - D. It is the process of defining data columns.
+
+4. Which regression model is suitable for predicting a categorical variable like "High Value Customer"?
+   - A. Linear regression
+   - B. Logistic regression
+   - C. Ridge regression
+   - D. Polynomial regression
+
+5. What is the purpose of using one-hot encoding in machine learning?
+   - A. Encoding numeric data
+   - B. Preparing data for model training
+   - C. Converting categorical data to numeric
+   - D. Enhancing dataset visualization
+
+6. What is the term used for a single row or record in a machine learning dataset?
+   - A. Example
+   - B. Label
+   - C. Feature
+   - D. Observation
+
+7. In machine learning, what is a label?
+   - A. A correct answer from historical data
+   - B. A numeric variable
+   - C. A potential feature
+   - D. A calculated field
+
+8. Why is it essential to have a large number of records when training a machine learning model?
+   - A. To improve feature engineering
+   - B. To reduce the impact of features
+   - C. To enhance data visualization
+   - D. To train the model effectively
+
+9. What task does BigQuery ML perform automatically in the machine learning process?
+   - A. Feature engineering
+   - B. Data splitting into training and evaluation sets
+   - C. Calculating fields in SQL
+   - D. Sifting through historical data
+
+10. Which method helps in preventing the overuse of ingredients (features) in machine learning?
+   - A. Feature engineering
+   - B. One-hot encoding
+   - C. Data splitting
+   - D. Understanding data quality
+
+### Solutions:
+
+1. A
+2. B
+3. C
+4. B
+5. C
+6. A
+7. A
+8. D
+9. B
+10. A
+
+## Key Phases of Machine Learning Project:
+
+- **Phase 1: Data Extraction and Loading (ETL)**
+  - Extract, transform, and load data into BigQuery.
+  - Utilize easy connectors from other Google products for efficient data transfer.
+  - Enrich the existing data warehouse with additional sources using SQL joins.
+
+- **Phase 2: Feature Selection and Preprocessing**
+  - Select and preprocess features for the model.
+  - Use SQL to create the training dataset.
+  - Leverage BigQuery ML for automated preprocessing tasks, such as one-hot encoding of categorical variables.
+
+- **Phase 3: Model Creation in BigQuery**
+  - Create the machine learning model within BigQuery.
+  - Use the `CREATE MODEL` command, specifying the model type and providing a SQL query with the training dataset.
+  - Execute the query to initiate model training.
+
+- **Phase 4: Model Evaluation**
+  - After training, evaluate the model's performance using the `ML.EVALUATE` query.
+  - Analyze key metrics, including root mean squared error for forecasting models and accuracy, precision, and recall for classification models.
+  - Detailed exploration of metrics is covered in later sections of the course.
+
+- **Phase 5: Model Deployment and Prediction**
+  - Once satisfied with the model's performance, deploy it for predictions.
+  - Use the `ML.PREDICT` command on the trained model.
+  - Obtain predictions and the model's confidence, with the label field reflecting the model's predictions.
+
+- **Iterative Process: Continuous Improvement**
+  - Acknowledge that machine learning projects are iterative.
+  - Iterate through phases to improve model performance.
+  - Continuously refine features, models, and evaluations based on real-world outcomes.
+
+- **Automation with BigQuery ML**
+  - Leverage BigQuery ML's automation for certain preprocessing tasks.
+  - Simplify model creation and training with integrated SQL commands.
+
+- **Metric Analysis**
+  - Understand and interpret metrics like root mean squared error, accuracy, precision, and recall.
+  - Gain insights into model effectiveness and areas for improvement.
+
+- **Confidence in Predictions**
+  - Assess the model's confidence in predictions.
+  - Identify the predicted outcomes in the label field, enhancing interpretability.
+
+- **Practical Application: Predictive Analytics**
+  - Apply machine learning models for practical predictive analytics.
+  - Use predictions to inform decision-making processes in real-world scenarios.
+
+- **Model Customization**
+  - Tailor models to specific requirements by adjusting parameters during the creation phase.
+  - Achieve a balance between model complexity and performance.
+
+- **Data Quality Considerations**
+  - Emphasize the importance of data quality in every phase.
+  - Ensure that data used for training and evaluation is representative and reliable.
+
+- **Continuous Learning and Exploration**
+  - Encourage continuous learning and exploration of machine learning concepts.
+  - Stay updated on advancements in BigQuery ML and related tools.
+
+- **Predictive Labeling**
+  - Identify the labeled field with predictions added, representing the model's predictive insights.
+  - Use predicted labels for further analysis or downstream processes.
+
+- **User-Friendly Commands**
+  - Utilize user-friendly commands in BigQuery ML for seamless execution of machine learning tasks.
+  - Foster a user-friendly environment for data scientists and practitioners.
+
+### Multiple Choice Questions:
+
+1. In which phase of a machine learning project do you extract, transform, and load data into BigQuery?
+   - A) Phase 1
+   - B) Phase 2
+   - C) Phase 3
+   - D) Phase 4
+
+2. How can you enrich an existing data warehouse in BigQuery with additional data sources?
+   - A) Use Python scripts
+   - B) Utilize SQL joins
+   - C) Use external storage only
+   - D) Import data manually
+
+3. What is the purpose of one-hot encoding in machine learning?
+   - A) Enhance model interpretability
+   - B) Convert categorical data to numeric
+   - C) Reduce data dimensionality
+   - D) Implement feature selection
+
+4. Which command is used to create a machine learning model in Big Query?
+   - A) `CREATE MODEL`
+   - B) `BUILD MODEL`
+   - C) `INITIATE MODEL`
+   - D) `GENERATE MODEL`
+
+5. What type of metric is commonly used to evaluate forecasting models in the ML dot evaluate query?
+   - A) Precision
+   - B) Area under the curve
+   - C) Root mean squared error
+   - D) Recall
+
+6. During which phase do you use the ML dot predict command to make predictions with your trained model?
+   - A) Phase 1
+   - B) Phase 3
+   - C) Phase 4
+   - D) Phase 5
+
+7. Which metric is specifically mentioned for evaluating classification models in the ML dot evaluate query?
+   - A) Root mean squared error
+   - B) Accuracy
+   - C) Precision
+   - D) Area under the curve
+
+8. What is added to the field name in the label field after making predictions using the ML dot predict command?
+   - A) Actual
+   - B) Predicted
+   - C) Expected
+   - D) Projected
+
+9. What role does SQL play in the machine learning project phases described?
+   - A) Only used for data extraction
+   - B) Used for creating training datasets
+   - C) Not used in any phase
+   - D) Primarily used for data visualization
+
+10. Which phase involves analyzing metrics like root mean squared error and area under the curve?
+    - A) Phase 2
+    - B) Phase 3
+    - C) Phase 4
+    - D) Phase 5
+
+---
+
+### Solutions:
+
+1. A) Phase 1
+2. B) Utilize SQL joins
+3. B) Convert categorical data to numeric
+4. A) `CREATE MODEL`
+5. C) Root mean squared error
+6. D) Phase 5
+7. B) Accuracy
+8. B) Predicted
+9. B) Used for creating training datasets
+10. C) Phase 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Additional information
+
+### Difference between linear and logistic regression
+Linear regression and logistic regression are both techniques used in machine learning, but they serve different purposes and are applied in distinct scenarios.
+
+**Linear Regression:**
+1. **Purpose:** Linear regression is used for predicting a continuous outcome variable (also called dependent variable) based on one or more predictor variables (independent variables).
+2. **Output Type:** The output of a linear regression model is a continuous numeric value. It predicts a quantity, and the relationship between the independent and dependent variables is assumed to be linear.
+3. **Example:** Predicting house prices based on features like square footage, number of bedrooms, and location.
+
+**Logistic Regression:**
+1. **Purpose:** Logistic regression is used for predicting the probability of an event occurring (binary outcome) based on one or more predictor variables.
+2. **Output Type:** The output of a logistic regression model is a probability score between 0 and 1. This probability is then transformed into a binary outcome (0 or 1) using a threshold. It is commonly used for binary classification problems.
+3. **Example:** Predicting whether an email is spam or not based on features like the sender, subject, and content.
+
+In summary, the key difference lies in the type of outcome variable each model predicts. Linear regression predicts continuous values, while logistic regression predicts probabilities for binary outcomes.
