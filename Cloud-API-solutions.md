@@ -1,5 +1,3 @@
-# Dat Engineering for Streaming Data
-
 ## Big Data Challenges
 
 - Building **scalable and reliable pipelines** is a core responsibility for data engineers in modern organizations.
@@ -1497,6 +1495,26 @@ Interactive queries
 
 
 ## Additional information
+
+### Relationship between Features and Labels
+In the context of machine learning, labels and features are fundamental concepts that play distinct roles in the training and evaluation of models.
+
+1. **Feature:**
+   - **Definition:** Features are the input variables or attributes used by a machine learning model to make predictions or classifications. They represent the characteristics or properties of the data that the model uses to learn patterns.
+   - **Nature:** Features can be numeric or categorical. Numeric features are quantitative, such as age or temperature, while categorical features are qualitative, like color or gender.
+   - **Example:** In a spam email classifier, features could include the frequency of certain words, the sender's address, or the presence of specific keywords.
+
+2. **Label:**
+   - **Definition:** The label is the output variable that the machine learning model is trying to predict. It is the target variable, the answer, or the category that the model is learning to assign to the input data.
+   - **Nature:** Labels are typically categorical, representing classes or categories. In binary classification, there are two labels (e.g., spam or not spam), while multi-class classification involves more than two labels.
+   - **Example:** In a handwritten digit recognition task, the label might be the actual digit (0 to 9) corresponding to the image of a handwritten numeral.
+
+3. **Relationship:**
+   - **Training Process:** During the training phase, the machine learning model learns to map input features to output labels by adjusting its internal parameters. The model tries to find patterns and relationships in the data that allow it to make accurate predictions.
+   - **Prediction:** Once trained, the model can take new, unseen data (with features) and predict the corresponding labels based on the learned patterns.
+   - **Evaluation:** The performance of a machine learning model is often assessed by comparing its predicted labels to the actual labels in a set of test data. Metrics like accuracy, precision, recall, and F1 score quantify how well the model generalizes to new, unseen instances.
+
+In summary, features are the input variables that the model uses to make predictions, while labels are the output variables that the model is trying to predict. The relationship between them lies in the learning process, where the model learns to associate patterns in the features with the corresponding labels during training.
 
 ### Difference between linear and logistic regression
 Linear regression and logistic regression are both techniques used in machine learning, but they serve different purposes and are applied in distinct scenarios.
