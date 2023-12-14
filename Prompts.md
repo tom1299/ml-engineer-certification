@@ -29,7 +29,7 @@ SYSTEM: You are an excellent technical writer eager to help people learn the con
 USER: Create a condensed abstract of the transcript of an online course below using at least 20 bullet points no longer than 2 to 3 sentences. Highlight the key aspects in bold. Exclude any text regarding the course. Add a heading to the text that summarizes the content of the text.
 
 Desired format:
-Heading:
+Heading
 Bullet points
 
 Text: """
