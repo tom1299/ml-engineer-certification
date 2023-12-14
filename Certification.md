@@ -965,8 +965,154 @@ Interactive queries
 9. B) Used for creating training datasets
 10. C) Phase 4
 
+## Key Commands of BigQuery ML - Abstract
 
+- **Create Model Command:**
+  - Create a model using the `create model` command.
+  - Overwrite existing models with `create or replace model` command.
 
+- **Model Options:**
+  - Models have options; the essential one is the **model type**.
+  - Specify options using the `model options` parameter.
+
+- **Inspecting Model Learning:**
+  - Use `ml.weights` to inspect what the model learned.
+  - Weights indicate feature importance for prediction (range: -1 to 1).
+
+- **Model Evaluation:**
+  - Evaluate model performance with `ml.evaluate` on a trained model.
+  - Metrics vary based on the chosen model type.
+
+- **Batch Predictions:**
+  - Make batch predictions using `ml.predict` on a trained model.
+  - Pass through the desired dataset for prediction.
+
+- **Supervised Model Requirements:**
+  - Need a **label field** in the training dataset or specify label columns.
+  - Define model features as data columns in the `select statement`.
+
+- **Feature Information:**
+  - Use `ml.feature info` after training to get statistics and metrics.
+  - Provides insights into the features used in the model.
+
+- **Model Object:**
+  - Model is an object in BigQuery stored in the dataset.
+  - View information like last update and training run count.
+
+- **Creating a New Model:**
+  - Simple process: `create model`, choose type, and pass a training dataset.
+
+- **Model Types:**
+  - For numeric predictions, use **linear regression** (e.g., sales forecasting).
+  - For discrete classes, use **logistic regression** (e.g., spam classification).
+
+- **Training Progress:**
+  - Monitor training progress with `ml.training info`.
+  - Check weights during and after model completion.
+
+- **Importance of Features:**
+  - Understand the significance of each feature using weights.
+
+- **Model Performance:**
+  - Assess model performance against evaluation dataset with `ml.evaluate`.
+
+- **Getting Predictions:**
+  - Obtain predictions by executing `ml.predict` with the model name and prediction dataset.
+
+---
+
+## Building Machine Learning Models on Google Cloud: Four Options Explained
+
+- **BigQuery ML**: Utilize SQL queries to create and execute machine learning models within BigQuery, suitable for tabular data if your data is already in BigQuery.
+- **Pre-built APIs**: Leverage ready-made machine-learning models by Google through APIs, ideal for those lacking training data or machine learning expertise, supporting various data types like image, text, and video.
+- **AutoML**: A no-code solution on Vertex AI, allowing you to build machine learning models through a point-and-click interface, providing simplicity and flexibility for users with little coding experience.
+- **Custom Training**: Code your own machine learning environment for full control over the ML pipeline, suitable for those with ML expertise, offering flexibility but requiring substantial coding and training data.
+- **Data Type Support**: BigQuery ML supports tabular data, while the other three options also support image, text, and video data.
+- **Training Data Size**: Pre-built APIs don't need training data; BigQuery ML and custom training require a large amount.
+- **ML and Coding Expertise**: Pre-built APIs and AutoML are user-friendly with low requirements; custom training has the highest requirement, and BigQuery ML requires SQL knowledge.
+- **Flexibility in Hyperparameter Tuning**: Pre-built APIs and AutoML lack hyperparameter tuning; BigQuery ML and custom training allow experimentation with hyperparameters.
+- **Time to Train Model**: Pre-built APIs require no training time, whereas the others' time depends on the project, with custom training usually taking the longest.
+- **Decision Factors**: Choose based on business needs and ML expertise, BigQuery ML for SQL-savvy teams, pre-built APIs for minimal ML experience, AutoML for quick custom models, and custom training for full workflow control.
+- **Business Users and Developers**: BigQuery ML for SQL familiarity, pre-built APIs for ease, AutoML for minimal coding, and custom training for full control.
+- **Pre-built APIs Use Cases**: Address common perceptual tasks like vision, video, and natural language without ML expertise or development effort.
+- **AutoML Advantages**: Codeless solution focusing on business problems, abstracting model architecture and ML provisioning.
+- **Custom Training Control**: Vertex AI custom training for ML engineers and data scientists seeking full control over workflow, allowing training and serving custom models with code.
+
+### Multiple Choice Questions:
+
+1. Which Google Cloud option is best suited for developers and data scientists seeking full control over the machine learning workflow, allowing custom training and serving with code?
+    - A. BigQuery ML
+    - B. Pre-built APIs
+    - C. AutoML
+    - D. Vertex AI custom training
+
+2. What datatype does BigQuery ML specifically support?
+    - A. Tabular data
+    - B. Image data
+    - C. Text data
+    - D. Video data
+
+3. In which scenarios might using pre-built APIs be the most appropriate choice? (Select all that apply)
+    - A. Developers and data scientists want full control.
+    - B. Business users or developers have little ML experience.
+    - C. Common perceptual tasks like vision, video, and natural language need addressing.
+    - D. The ML model needs to be built from scratch.
+
+4. What is a characteristic of AutoML on Vertex AI?
+    - A. It requires extensive coding.
+    - B. It is a codeless solution.
+    - C. It exclusively supports tabular data.
+    - D. It is suitable for SQL-based models.
+
+5. Which Google Cloud option allows experimentation with hyperparameters? (Select all that apply)
+    - A. Pre-built APIs
+    - B. AutoML
+    - C. BigQuery ML
+    - D. Vertex AI custom training
+
+6. What is a primary requirement for using BigQuery ML?
+    - A. Extensive machine learning expertise
+    - B. Understanding of SQL
+    - C. Codeless solution
+    - D. No training data required
+
+7. When does custom training typically take the longest time?
+    - A. When using pre-built APIs
+    - B. When using AutoML
+    - C. When building the ML model from scratch
+    - D. When leveraging BigQuery ML
+
+8. Which Google Cloud option is a no-code solution for building machine learning models?
+    - A. BigQuery ML
+    - B. Pre-built APIs
+    - C. AutoML
+    - D. Vertex AI custom training
+
+9. What is a unique characteristic of pre-built APIs?
+    - A. They require extensive ML expertise.
+    - B. They address common perceptual tasks without ML expertise.
+    - C. They support only tabular data.
+    - D. They provide full control over the ML workflow.
+
+10. In which scenario is BigQuery ML the most suitable option?
+    - A. Little ML experience and minimal coding time
+    - B. Full control of ML workflow with code
+    - C. Familiarity with SQL and data in BigQuery
+    - D. Addressing common perceptual tasks without ML expertise
+
+---
+#### Answers
+
+1. D
+2. A
+3. B, C
+4. B
+5. B, C
+6. B
+7. C
+8. C
+9. B
+10. C
 
 
 
@@ -994,3 +1140,8 @@ Linear regression and logistic regression are both techniques used in machine le
 3. **Example:** Predicting whether an email is spam or not based on features like the sender, subject, and content.
 
 In summary, the key difference lies in the type of outcome variable each model predicts. Linear regression predicts continuous values, while logistic regression predicts probabilities for binary outcomes.
+
+
+TODO
+====
+- https://cloud.google.com/bigquery/docs/bqml-introduction
