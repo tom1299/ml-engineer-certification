@@ -509,3 +509,142 @@
 8. C
 9. C, D
 10. C
+
+### Unveiling the ML Journey: Key Concepts
+
+- **Overview of the ML Journey:**
+  - Understand the roadmap of processes and products from automation to machine learning.
+  - Consider real-life examples within your organization to identify these stages.
+
+- **Individual Contributor Phase:**
+  - **Prototyping Opportunity:**
+    - Initiate the process with an individual contributor, allowing cheap, flexible prototyping.
+    - Significance of trying multiple ideas, failing fast, and learning from failures.
+
+- **Delegation Phase:**
+  - **Scaling Flexibility:**
+    - Increase the number of contributors to scale the process while maintaining flexibility.
+    - **Formalization Importance:**
+      - Delegation necessitates formalizing the business process and defining success.
+
+- **Humans in the Loop:**
+  - **Critical Review:**
+    - Great ML systems involve human reviews for algorithms, responses, and subsamples.
+    - ML should be seen as enhancing human impact, not replacing it entirely.
+
+- **Digitization Phase:**
+  - **Mundane Task Automation:**
+    - Digitization involves getting computer systems to handle repetitive tasks.
+    - **Balancing Automation:**
+      - Trade upfront investment for lower marginal cost and improved service quality.
+
+- **Big Data and Analytics:**
+  - **Measure Everything:**
+    - Comprehensive measurement of internal operations and user behaviors.
+    - **Review and Redefine Success:**
+      - Use data to redefine success, tuning software algorithms based on insights.
+
+- **Skipping Steps Risks:**
+  - **ML Algorithm Training:**
+    - Skipping big data and analytics hinders ML algorithm training due to unclean data.
+    - **Measure of Success:**
+      - Inability to build a measure of success if this step is skipped.
+
+- **Staying Too Long Risks:**
+  - **Limiting Complexity:**
+    - Staying too long in one phase limits problem-solving complexity.
+    - **Google Search Example:**
+      - Google search stayed in the big data phase for years before fully adopting ML.
+
+- **Machine Learning Phase:**
+  - **Automating Feedback Loop:**
+    - Complete the feedback loop by automating blocks between measuring success and tuning software.
+    - **Enhancing Cognition:**
+      - ML outpaces human abilities, providing faster, nuanced answers through learning from interactions.
+
+
+### Questions on Unveiling the ML Journey
+
+1. **Individual Contributor Phase:**
+   - What is the primary advantage of the individual contributor phase?
+     - A. Cost-effectiveness
+     - B. Scalability
+     - C. Formalization
+     - D. Automation
+
+2. **Delegation Phase:**
+   - Why is delegation crucial in the ML journey?
+     - A. Formalizing business processes
+     - B. Avoiding organizational buy-in
+     - C. Skipping the investment phase
+     - D. Scaling flexibility
+
+3. **Humans in the Loop:**
+   - What role do humans play in ML systems?
+     - A. Solely reviewing algorithms
+     - B. Ignoring algorithm responses
+     - C. Avoiding random subsamples
+     - D. Completely replacing humans
+
+4. **Digitization Phase:**
+   - What is the key objective of digitization in the ML journey?
+     - A. Eliminating people from processes
+     - B. Trading upfront investment for lower run rate
+     - C. Avoiding infrastructure requirements
+     - D. Limiting the complexity of problems
+
+5. **Big Data and Analytics:**
+   - In the big data phase, what is the focus of measurement?
+     - A. Internal operations only
+     - B. External users only
+     - C. Everything about internal and external
+     - D. Summarizing but not deep-diving
+
+6. **Skipping Steps Risks:**
+   - What is a consequence of skipping the big data and analytics phase?
+     - A. Clean and organized data
+     - B. Inability to train ML algorithm
+     - C. Improved insights manually
+     - D. Successful ML algorithm
+
+7. **Staying Too Long Risks:**
+   - Staying too long in one phase limits:
+     - A. Complexity of problems
+     - B. Project failures
+     - C. Industry advantage
+     - D. ML algorithm training
+
+8. **Machine Learning Phase:**
+   - What does the ML phase complete in the feedback loop?
+     - A. Scaling human impact
+     - B. Automating inputs
+     - C. Tuning software algorithm
+     - D. Escaping human cognition
+
+9. **ML KPI Expectations:**
+   - What is the general expectation for KPI improvement in Google products through ML?
+     - A. 5%
+     - B. 10%
+     - C. 15%
+     - D. 20%
+
+10. **Nuanced Treatment:**
+    - How does ML provide more nuanced treatment of details?
+      - A. Learning from billions of interactions
+      - B. Avoiding real-world use cases
+      - C. Limiting cognitive capabilities
+      - D. Escaping human interaction
+
+---
+#### Answers
+
+1. A
+2. A, D
+3. A, D
+4. B
+5. C
+6. B, D
+7. A, C
+8. C
+9. B
+10. A
