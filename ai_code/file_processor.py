@@ -1,23 +1,13 @@
 import glob
 import os
 
-def process_file1(filename):
-    print(f'Processing file with processor 1: {filename}')
+def check_file_content(filename, terms):
     with open(filename, 'r') as file:
         content = file.read()
-        print(content)
-    return True
-
-def process_file2(filename):
-    print(f'Processing file with processor 2: {filename}')
-    with open(filename, 'r') as file:
-        content = file.read()
-        print(content)
-    return True
-
-def is_valid_file(filename):
-    # Add your selection logic here
-    return True
+        for term in terms:
+            if term not in content:
+                return False
+        return True
 
 def process_files(glob_pattern, file_processors, file_selector):
     for filename in glob.glob(glob_pattern, recursive=True):
